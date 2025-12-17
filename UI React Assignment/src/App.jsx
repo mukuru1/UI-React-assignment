@@ -1,12 +1,12 @@
 
-import { Sidebar } from "./components/sections/sidebar";
-import { Navbar } from "./components/sections/navbar";
-import { CTA } from "./components/sections/cta";
-import { RecentlyAddedProducts } from "./components/sections/recentproducts";
-import { RecentActivity } from "./components/sections/recentactivity";
-import { QuickActions } from "./components/sections/quick-actions";
-import { StatSection } from "./components/sections/statsection";
-import { UsersTable } from "./components/sections/userstable";
+import { Sidebar } from "./components/sectors/sidebar";
+import { Navbar } from "./components/sectors/navbar";
+import { CTA } from "./components/sectors/cta";
+import { RecentlyAddedProducts } from "./components/sectors/recentproducts";
+import { RecentActivity } from "./components/sectors/recentactivity";
+import { QuickActions } from "./components/sectors/quickactions";
+import { StatSection } from "./components/sectors/statsection";
+import { UsersTable } from "./components/sectors/userstable";
 
 function App() {
   return (
