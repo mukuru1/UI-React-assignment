@@ -1,8 +1,8 @@
 import { UserIcon } from "lucide-react";
-import { SimpleCard } from "../base/card";
-import { IconCard } from "../icon-card";
-import { Badge } from "../base/badge";
-import { cn } from "../../utils";
+import { SimpleCard } from "../ui structure/card";
+import { IconCard } from "../iconcard";
+import { Badge } from "../ui structure/badge";
+import { cn } from "../../lib";
 
 const USERS = [
   {

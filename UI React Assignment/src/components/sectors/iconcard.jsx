@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import { cn } from "../utils";
+import { cn } from "../lib";
 
 const iconCardVariants = cva("flex rounded-lg justify-center items-center", {
   variants: {

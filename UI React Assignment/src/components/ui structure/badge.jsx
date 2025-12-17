@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import { cn } from "../../utils";
+import { cn } from "../../lib";
 
 const badgeVariants = cva(
   "relative inline-flex shrink-0 items-center justify-center gap-1 rounded-full border border-transparent font-medium whitespace-nowrap transition-shadow px-2.5 py-1 text-xs",
