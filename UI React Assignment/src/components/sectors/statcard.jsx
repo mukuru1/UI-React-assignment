@@ -1,5 +1,5 @@
 import { cn } from "../utils";
-import { IconCard } from "./icon-card";
+import { IconCard } from "./iconcard";
 
 export const StatCard = ({
   value,
