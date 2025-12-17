@@ -192,10 +192,11 @@ const quickActions = [
   },
 ];
 
-export const Frame = (): JSX.Element => {
+export const Frame = () => {
   return (
     <div className="bg-gray-50 min-h-screen w-full">
       <div className="max-w-[1400px] mx-auto p-6">
+        {/* --- HEADER --- */}
         <header className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
@@ -211,235 +212,22 @@ export const Frame = (): JSX.Element => {
           </div>
         </header>
 
+        {/* --- OVERVIEW CARD --- */}
         <Card className="bg-blue-600 text-white border-0 mb-6">
           <CardContent className="p-6">
-            <div className="flex items-start justify-between">
-              <div>
-                <h2 className="text-xl font-bold mb-2">
-                  HUZA INVENTORY - System Overview
-                </h2>
-                <p className="text-blue-100 text-sm mb-4">
-                  Manage your HUZA inventory and process assignments efficiently
-                </p>
-                <div className="flex items-center gap-2 text-sm">
-                  <CheckCircleIcon className="h-4 w-4" />
-                  <span>All Systems Operational</span>
-                </div>
-              </div>
+            <h2 className="text-xl font-bold mb-2">
+              HUZA INVENTORY - System Overview
+            </h2>
+            <p className="text-blue-100 text-sm mb-4">
+              Manage your HUZA inventory and process assignments efficiently
+            </p>
+            <div className="flex items-center gap-2 text-sm">
+              <CheckCircleIcon className="h-4 w-4" />
+              <span>All Systems Operational</span>
             </div>
           </CardContent>
         </Card>
 
-        <div className="grid grid-cols-3 gap-4 mb-6">
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-100 rounded-lg">
-                  <PackageIcon className="h-6 w-6 text-blue-600" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-gray-900">116</p>
-                  <p className="text-sm text-gray-500">Total Products</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-100 rounded-lg">
-                  <FileTextIcon className="h-6 w-6 text-blue-600" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-gray-900">100</p>
-                  <p className="text-sm text-gray-500">Total Requests</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-green-100 rounded-lg">
-                  <CheckCircleIcon className="h-6 w-6 text-green-600" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-gray-900">10</p>
-                  <p className="text-sm text-gray-500">Approved Requests</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="mb-6">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">
-              Recent Added Products
-            </h3>
-            <Button variant="link" className="text-blue-600">
-              View all
-            </Button>
-          </div>
-          <div className="grid grid-cols-5 gap-4">
-            {recentProducts.map((product, index) => (
-              <Card key={index}>
-                <CardContent className="p-4">
-                  <h4 className="font-semibold text-gray-900 mb-1">
-                    {product.name}
-                  </h4>
-                  <p className="text-xs text-gray-500 mb-2">
-                    {product.category}
-                  </p>
-                  <p className="text-xs text-gray-400 mb-3">{product.date}</p>
-                  <Badge
-                    className={`${product.statusColor} text-xs font-medium`}
-                  >
-                    {product.status}
-                  </Badge>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className="mb-6">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">UsersIcon</h3>
-            <Button variant="link" className="text-blue-600">
-              View all
-            </Button>
-          </div>
-          <Card>
-            <CardContent className="p-0">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>NAME</TableHead>
-                    <TableHead>ROLE</TableHead>
-                    <TableHead>STATUS</TableHead>
-                    <TableHead>LAST LOGIN</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {users.map((user, index) => (
-                    <TableRow key={index}>
-                      <TableCell>
-                        <div className="flex items-center gap-3">
-                          <Avatar className="h-8 w-8">
-                            <AvatarFallback className="bg-gray-200 text-gray-600 text-xs">
-                              {user.name
-                                .split(" ")
-                                .map((n) => n[0])
-                                .join("")}
-                            </AvatarFallback>
-                          </Avatar>
-                          <div>
-                            <p className="font-medium text-gray-900 text-sm">
-                              {user.name}
-                            </p>
-                            <p className="text-xs text-gray-500">
-                              {user.email}
-                            </p>
-                          </div>
-                        </div>
-                      </TableCell>
-                      <TableCell>
-                        <Badge
-                          className={`${user.roleColor} text-xs font-medium`}
-                        >
-                          {user.role}
-                        </Badge>
-                      </TableCell>
-                      <TableCell>
-                        <Badge
-                          className={`${user.statusColor} text-xs font-medium`}
-                        >
-                          {user.status}
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="text-sm text-gray-500">
-                        {user.lastLogin}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="grid grid-cols-2 gap-6">
-          <div>
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900">
-                Recent Activity
-              </h3>
-              <Button variant="link" className="text-blue-600">
-                View all
-              </Button>
-            </div>
-            <div className="space-y-4">
-              {recentActivity.map((activity, index) => (
-                <Card key={index}>
-                  <CardContent className="p-4">
-                    <div className="flex gap-3">
-                      <div className="p-2 bg-blue-100 rounded-lg h-fit">
-                        <PackageIcon className="h-4 w-4 text-blue-600" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-medium text-gray-900 text-sm mb-1">
-                          {activity.title}
-                        </h4>
-                        <p className="text-xs text-gray-500 mb-2">
-                          {activity.description}
-                        </p>
-                        <p className="text-xs text-gray-400">{activity.time}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              Quick Actions
-            </h3>
-            <div className="space-y-4">
-              {quickActions.map((action, index) => {
-                const IconComponent = action.icon;
-                return (
-                  <Card
-                    key={index}
-                    className="cursor-pointer hover:shadow-md transition-shadow"
-                  >
-                    <CardContent className="p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="p-3 bg-blue-50 rounded-lg">
-                          <IconComponent
-                            className={`h-5 w-5 ${action.iconColor}`}
-                          />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-900 text-sm">
-                            {action.title}
-                          </h4>
-                          <p className="text-xs text-gray-500">
-                            {action.description}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
