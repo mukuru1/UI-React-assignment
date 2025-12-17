@@ -1,19 +1,17 @@
 import { cva } from "class-variance-authority";
-import * as React from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../../utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "relative inline-flex shrink-0 items-center justify-center gap-1 rounded-full border border-transparent font-medium whitespace-nowrap transition-shadow px-2.5 py-1 text-xs",
   {
     variants: {
       variant: {
-        default:
-          "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
-        secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        destructive:
-          "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
-        outline: "text-foreground",
+        default: "bg-muted text-muted-foreground",
+        primary: "bg-primaryColor-100 text-primaryColor-700",
+        success: "bg-success/8 text-success-foreground",
+        warning: "bg-warning/8 text-warning-foreground",
+        error: "bg-destructive/8 text-destructive-foreground",
+        purple: "bg-purple-100 text-purple-600",
       },
     },
     defaultVariants: {
@@ -22,10 +20,25 @@ const badgeVariants = cva(
   }
 );
 
-function Badge({ className, variant, ...props }) {
-  return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
-  );
-}
+const textToVariant = {
+  Admin: "purple",
+  Manager: "primary",
+  Staff: "default",
+  Active: "success",
+  Inactive: "error",
+  "In Stock": "success",
+  "Low Stock": "warning",
+  "Out of Stock": "error",
+};
 
-export { Badge, badgeVariants };
+export const Badge = ({ variant = "default", text, className }) => {
+  const resolvedVariant = textToVariant[text] || variant;
+
+  return (
+    <div className={cn(badgeVariants({ variant: resolvedVariant, className }))}>
+      {text}
+    </div>
+  );
+};
+
+export { badgeVariants };
