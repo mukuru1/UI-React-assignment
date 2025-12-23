@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useProducts } from "../context/product-context";
+import { useProducts } from "../context/ProductContext";
 
 export default function Products() {
   const { products, addProduct, deleteProduct } = useProducts();

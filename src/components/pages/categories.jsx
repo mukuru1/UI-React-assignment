@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCategories } from "../context/category-context";
+import { useCategories } from "../context/CategoryContext";
 
 export default function Categories() {
   const { categories, addCategory, deleteCategory } = useCategories();

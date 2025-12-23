@@ -1,4 +1,4 @@
-import { useUsers } from "../context/user-context";
+import { useUsers } from "../context/UserContext";
 
 export default function Users() {
   const { users, deleteUser } = useUsers();
