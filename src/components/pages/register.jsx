@@ -31,6 +31,8 @@ export default function Register() {
       <button className="w-full bg-green-500 text-white p-2">
         Register
       </button>
+      
     </form>
+  
   );
 }
