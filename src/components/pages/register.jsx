@@ -31,7 +31,9 @@ export default function Register() {
       <button className="w-full bg-green-500 text-white p-2">
         Register
       </button>
-      
+      <a href="/login" className="block mt-4 text-center text-sm text-blue-600">
+        Already have an account? Login
+      </a>
     </form>
   
   );
