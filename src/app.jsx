@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-/* Existing dashboard components (UNCHANGED) */
+
 import { Sidebar } from "./components/sections/sidebar";
 import { Navbar } from "./components/sections/navbar";
 import { CTA } from "./components/sections/cta";
