@@ -11,11 +11,11 @@ import { StatSection } from "./components/sections/stat-section";
 import { UsersTable } from "./components/sections/users-table";
 
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Products from "./pages/Products";
-import Categories from "./pages/Categories";
-import Users from "./pages/Users";
+import Login from "./components/pages/login";
+import Register from "./components/pages/register";
+import Products from "./components/pages/products";
+import Categories from "./components/pages/categories";
+import Users from "./components/pages/users";
 
 
 import ProtectedRoute from "./components/ProtectedRoute";
