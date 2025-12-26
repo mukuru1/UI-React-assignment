@@ -1,6 +1,6 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-
+/* Existing dashboard components (UNCHANGED) */
 import { Sidebar } from "./components/sections/sidebar";
 import { Navbar } from "./components/sections/navbar";
 import { CTA } from "./components/sections/cta";
@@ -11,14 +11,16 @@ import { StatSection } from "./components/sections/stat-section";
 import { UsersTable } from "./components/sections/users-table";
 
 
-import Login from "./components/pages/login";
-import Register from "./components/pages/register";
-import Products from "./components/pages/products";
-import Categories from "./components/pages/categories";
-import Users from "./components/pages/users";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Products from "./pages/Products";
+import Categories from "./pages/Categories";
+import Users from "./pages/Users";
+
 
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";
+
 
 function DashboardLayout() {
   return (
@@ -36,9 +38,9 @@ function DashboardLayout() {
 
         <main className="flex-1 bg-muted/50 p-4 md:p-6 flex flex-col gap-6 w-full">
           <Routes>
-            {/* Dashboard Home */}
+          
             <Route
-              path="/"
+              path="/dashboard"
               element={
                 <>
                   <CTA />
@@ -53,11 +55,11 @@ function DashboardLayout() {
               }
             />
 
-            {/* CRUD Pages */}
+          
             <Route path="/products" element={<Products />} />
             <Route path="/categories" element={<Categories />} />
 
-            {/* Admin Only */}
+          
             <Route
               path="/users"
               element={
@@ -73,14 +75,17 @@ function DashboardLayout() {
   );
 }
 
-function App() {
+export default function App() {
   return (
     <Routes>
-      {/* Public Routes */}
+  
+      <Route path="/" element={<Navigate to="/login" replace />} />
+
+    
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      {/* Protected Dashboard */}
+
       <Route
         path="/*"
         element={
@@ -92,5 +97,3 @@ function App() {
     </Routes>
   );
 }
-
-export default App;

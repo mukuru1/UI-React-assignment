@@ -32,9 +32,7 @@ export default function Login() {
       <button className="w-full bg-blue-500 text-white p-2">
         Login
       </button>
-      <a href="/register" className="block mt-4 text-center text-sm text-blue-600">
-        Don't have an account? Register
-      </a>
+    
     </form>
   );
 }
