@@ -8,16 +8,16 @@ import {
   Shield,
   ShieldAlert,
 } from "lucide-react";
-import { useData } from "../contexts/data-context";
-import { useAuth } from "../contexts/auth-context";
-import { SimpleCard } from "../components/base/card";
-import { Button } from "../components/base/button";
-import { Badge } from "../components/base/badge";
-import { Modal } from "../components/base/modal";
-import { Input } from "../components/base/input";
-import { Select } from "../components/base/select";
-import { IconCard } from "../components/icon-card";
-import { cn } from "../utils";
+import { useData } from "../context/UserContext";
+import { useAuth } from "../context/AuthContext";
+import { SimpleCard } from "../base/card";
+import { Button } from "../base/button";
+import { Badge } from "../base/badge";
+import { Modal } from "../base/modal";
+import { Input } from "../base/input";
+import { Select } from "../base/select";
+import { IconCard } from "../icon-card";
+import { cn } from "../../utils";
 
 export const UsersPage = () => {
   const { users, addUser, updateUser, deleteUser } = useData();

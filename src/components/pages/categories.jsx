@@ -5,7 +5,7 @@ import { Button } from "../base/button";
 import { Modal } from "../base/modal";
 import { Input } from "../base/input";
 import { Textarea } from "../base/textarea";
-import { IconCard } from "./components/icon-card";
+import { IconCard } from "../icon-card";
 
 export const CategoriesPage = () => {
   const {
