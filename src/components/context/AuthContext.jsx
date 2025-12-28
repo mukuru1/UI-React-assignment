@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { INITIAL_USERS } from "../data/seed";
+import { INITIAL_USERS } from "../../users/data";
 
 const AuthContext = createContext(null);
 
