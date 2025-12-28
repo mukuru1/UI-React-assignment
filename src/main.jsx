@@ -3,28 +3,20 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./app.jsx";
-
-import { AuthProvider } from "./components/context/AuthContext";
-import { ProductProvider } from "./components/context/ProductContext";
-import { CategoryProvider } from "./components/context/CategoryContext";
-import { UserProvider } from "./components/context/UserContext";
-import { ThemeProvider } from "./components/context/ThemeContext";
-
+import { AuthProvider } from ".components/context/AuthContext";
+import { ThemeProvider } from "../context/ThemeContext";
+import { DataProvider } from "../context/UserContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <ThemeProvider>
-          <UserProvider>
-            <CategoryProvider>
-              <ProductProvider>
-                <App />
-              </ProductProvider>
-            </CategoryProvider>
-          </UserProvider>
-        </ThemeProvider>
-      </AuthProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <DataProvider>
+            <App />
+          </DataProvider>
+        </AuthProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
 );

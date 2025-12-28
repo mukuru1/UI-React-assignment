@@ -125,7 +125,7 @@ export const LoginPage = () => {
                 to="/register"
                 className="text-primaryColor-500 hover:text-primaryColor-600 font-medium transition-colors"
               >
-                Create account
+                Register Here Bro!
               </Link>
             </p>
           </div>
