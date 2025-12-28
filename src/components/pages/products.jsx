@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Plus, Search, Edit2, Trash2, BoxIcon } from "lucide-react";
-import { useData } from "../contexts/data-context";
-import { SimpleCard } from "../components/base/card";
-import { Button } from "../components/base/button";
-import { Badge } from "../components/base/badge";
-import { Modal } from "../components/base/modal";
-import { Input } from "../components/base/input";
-import { Select } from "../components/base/select";
-import { IconCard } from "../components/icon-card";
+import { useData } from "../context/UserContext";
+import { SimpleCard } from "../base/card";
+import { Button } from "../base/button";
+import { Badge } from "../base/badge";
+import { Modal } from "../base/modal";
+import { Input } from "../base/input";
+import { Select } from "../base/select";
+import { IconCard } from "../icon-card";
 
 export const ProductsPage = () => {
   const { products, categories, addProduct, updateProduct, deleteProduct } =
