@@ -3,9 +3,9 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./app.jsx";
-import { AuthProvider } from ".components/context/AuthContext";
-import { ThemeProvider } from "../context/ThemeContext";
-import { DataProvider } from "../context/UserContext";
+import { AuthProvider } from "./components/context/AuthContext";
+import { ThemeProvider } from "./components/context/ThemeContext";
+import { DataProvider } from "./components/context/UserContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
