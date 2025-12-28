@@ -18,8 +18,8 @@ import Categories from "./components/pages/categories";
 import Users from "./components/pages/users";
 
 
-import ProtectedRoute from "./components/ProtectedRoute";
-import AdminRoute from "./components/AdminRoute";
+import ProtectedRoute from "./components/routes/ProtectedRoute";
+import AdminRoute from "./components/routes/AdminRoute";
 
 
 function DashboardLayout() {
