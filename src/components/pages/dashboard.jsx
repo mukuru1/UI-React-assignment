@@ -1,8 +1,8 @@
-import { CTA } from "../components/sections/cta";
-import { RecentlyAddedProducts } from "../components/sections/recently-added-products";
-import { RecentActivity } from "../components/sections/recent-activity";
-import { QuickActions } from "../components/sections/quick-actions";
-import { StatSection } from "../components/sections/stat-section";
+import { CTA } from "../sections/cta";
+import { RecentlyAddedProducts } from "../sections/recently-added-products";
+import { RecentActivity } from "../sections/recent-activity";
+import { QuickActions } from "../sections/quick-actions";
+import { StatSection } from "../sections/stat-section";
 
 export const DashboardPage = () => {
   return (

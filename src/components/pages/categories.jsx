@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Plus, Search, Edit2, Trash2, Layers, FolderOpen } from "lucide-react";
-import { useData } from "../contexts/data-context";
-import { Button } from "../components/base/button";
-import { Modal } from "../components/base/modal";
-import { Input } from "../components/base/input";
-import { Textarea } from "../components/base/textarea";
-import { IconCard } from "../components/icon-card";
+import { useData } from "../context/UserContext";
+import { Button } from "../base/button";
+import { Modal } from "../base/modal";
+import { Input } from "../base/input";
+import { Textarea } from "../base/textarea";
+import { IconCard } from "./components/icon-card";
 
 export const CategoriesPage = () => {
   const {
