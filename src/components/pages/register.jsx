@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { BoxIcon, Eye, EyeOff } from "lucide-react";
-import { useAuth } from "../contexts/auth-context";
-import { Button } from "../components/base/button";
-import { Input } from "../components/base/input";
+import { useAuth } from "../context/AuthContext";
+import { Button } from "../base/button";
+import { Input } from "../base/input";
 
 export const RegisterPage = () => {
   const { register, isAuthenticated } = useAuth();
