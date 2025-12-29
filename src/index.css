@@ -7,21 +7,21 @@
   --breakpoint-large: 1000px;
   --breakpoint-desktop: 1200px;
 
-  /* Core colors */
+ 
   --color-background: #ffffff;
   --color-foreground: #0f172a;
   --color-border: #e5e7eb;
   --color-muted: oklch(0.97 0 0);
   --color-muted-foreground: oklch(0.556 0 0);
 
-  /* Semantic colors */
+ 
   --color-destructive: #ef4444;
   --color-destructive-foreground: #dc2626;
   --color-success: #22c55e;
   --color-success-foreground: #16a34a;
   --color-warning: #f59e0b;
   --color-warning-foreground: #d97706;
-  /* Purple accent */
+ 
   --color-accent-50: #faf5ff;
   --color-accent-100: #f3e8ff;
   --color-accent-200: #e9d5ff;
@@ -34,7 +34,7 @@
   --color-accent-900: #581c87;
   --color-accent-foreground: #ffffff;
 
-  /* Primary colors */
+
   --color-primaryColor-50: #e9effd;
   --color-primaryColor-100: #bbcff9;
   --color-primaryColor-200: #9bb7f6;
