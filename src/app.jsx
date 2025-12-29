@@ -1,22 +1,23 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Layout } from "./components/format";
-import { ProtectedRoute } from "./components/routes/AdminRoute";
-import { AdminRoute } from "./components/routes/ProtectedRoute";
+import { Layout } from "./components/layout";
+import { ProtectedRoute } from "./components/guards/protected-route";
+import { AdminRoute } from "./components/guards/admin-route";
 
-import { LoginPage } from "./components/pages/login";
-import { RegisterPage } from "./components/pages/register";
-import { DashboardPage } from "./components/pages/dashboard";
-import { ProductsPage } from "./components/pages/products";
-import { CategoriesPage } from "./components/pages/categories";
-import { UsersPage } from "./components/pages/users";
+import { LoginPage } from "./pages/login";
+import { RegisterPage } from "./pages/register";
+import { DashboardPage } from "./pages/dashboard";
+import { ProductsPage } from "./pages/products";
+import { CategoriesPage } from "./pages/categories";
+import { UsersPage } from "./pages/users";
 
 function App() {
   return (
     <Routes>
-    
+     
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
 
+      
       <Route
         element={
           <ProtectedRoute>

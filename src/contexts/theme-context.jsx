@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const ThemeContext = createContext(null);
 
@@ -39,5 +39,3 @@ export function useTheme() {
   }
   return context;
 }
-
-export const useTheme = () => useContext(ThemeContext);

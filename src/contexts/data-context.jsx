@@ -3,7 +3,7 @@ import {
   INITIAL_PRODUCTS,
   INITIAL_CATEGORIES,
   INITIAL_USERS,
-} from "../../users/data";
+} from "../data/seed";
 
 const DataContext = createContext(null);
 

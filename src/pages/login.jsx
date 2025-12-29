@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { BoxIcon, Eye, EyeOff } from "lucide-react";
-import { useAuth } from "../context/AuthContext";
-import { Button } from "../base/button";
-import { Input } from "../base/input";
+import { useAuth } from "../contexts/auth-context";
+import { Button } from "../components/base/button";
+import { Input } from "../components/base/input";
 
 export const LoginPage = () => {
   const { login, isAuthenticated } = useAuth();
@@ -57,10 +57,10 @@ export const LoginPage = () => {
         <div className="bg-background border rounded-2xl shadow-xl p-6 md:p-8">
           <div className="text-center mb-6">
             <h2 className="text-xl font-semibold text-foreground">
-              Welcome back
+              Welcome back bro!
             </h2>
             <p className="text-sm text-muted-foreground mt-1">
-              Sign in to your account to continue
+              Sign in to your account to continue bro
             </p>
           </div>
 
@@ -132,7 +132,7 @@ export const LoginPage = () => {
 
           <div className="mt-6 p-3 bg-muted/50 rounded-lg">
             <p className="text-xs text-muted-foreground text-center">
-              <span className="font-medium">Demo:</span> admin@ihuza.com /
+              <span className="font-medium">Only admin</span>  Email: admin@ihuza.com  Password:
               admin123
             </p>
           </div>
