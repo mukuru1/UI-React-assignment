@@ -9,6 +9,7 @@ import { DashboardPage } from "./pages/dashboard";
 import { ProductsPage } from "./pages/products";
 import { CategoriesPage } from "./pages/categories";
 import { UsersPage } from "./pages/users";
+import { ApiDemoPage } from "./pages/api-demo";
 
 function App() {
   return (
@@ -28,8 +29,9 @@ function App() {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/api-demo" element={<ApiDemoPage />} />
 
-       
+
         <Route
           path="/users"
           element={

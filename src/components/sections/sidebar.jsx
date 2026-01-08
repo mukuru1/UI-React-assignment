@@ -6,6 +6,7 @@ import {
   UserIcon,
   LogOut,
   X,
+  Zap,
 } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IconCard } from "../icon-card";
@@ -36,6 +37,11 @@ const getNavItems = (isAdmin) => [
     label: "Categories",
     icon: Layers,
     path: "/categories",
+  },
+  {
+    label: "API Demo",
+    icon: Zap,
+    path: "/api-demo",
   },
 ];
 

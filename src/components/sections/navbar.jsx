@@ -8,6 +8,7 @@ const pageTitles = {
   "/products": "Products",
   "/categories": "Categories",
   "/users": "Users",
+  "/api-demo": "API Demo",
 };
 
 export const Navbar = ({ onMenuClick }) => {
